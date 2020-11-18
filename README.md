@@ -16,6 +16,8 @@ useState takes and intial state and returns the current state value and a functi
 
 The Effect Hook, useEffect, adds the ability to perform side effects from a function component. It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes, but unified into a single API.
 
+By using this Hook, you tell React that your component needs to do something after render. React will remember the function you passed (we’ll refer to it as our “effect”), and call it later after performing the DOM updates.
+
 useEffect() hook accepts 2 arguments:
 
 #### `useEffect(callback[, dependencies]);`
