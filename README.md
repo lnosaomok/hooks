@@ -42,9 +42,9 @@ The ref object is a generic container whose .current property is mutable and can
 
 #### Sources:
 
-[UseState React Doc](https://reactjs.org/docs/hooks-reference.html#usestate)
-[UseEffect React Doc](https://reactjs.org/docs/hooks-reference.html#useeffect)
-[UseEffect Blog Post (Dmitri Pavlutin)](https://dmitripavlutin.com/react-useeffect-explanation/)
+- [UseState React Doc](https://reactjs.org/docs/hooks-reference.html#usestate)
+- [UseEffect React Doc](https://reactjs.org/docs/hooks-reference.html#useeffect)
+- [UseEffect Blog Post (Dmitri Pavlutin)](https://dmitripavlutin.com/react-useeffect-explanation/)
 
-[UseRef React Doc](https://reactjs.org/docs/hooks-reference.html#useref)
-[UseRef React Medium Article](https://medium.com/javascript-in-plain-english/implementing-useref-in-react-732908aa1998)
+- [UseRef React Doc](https://reactjs.org/docs/hooks-reference.html#useref)
+- [UseRef React Medium Article](https://medium.com/javascript-in-plain-english/implementing-useref-in-react-732908aa1998)
