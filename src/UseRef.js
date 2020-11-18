@@ -68,7 +68,7 @@ const UseRef = () => {
               <input
                 type='text'
                 name='search'
-                placeholder='enter date'
+                placeholder='enter email'
                 autocomplete='off'
                 value={input}
                 ref={inputRef}
