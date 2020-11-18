@@ -16,12 +16,35 @@ useState takes and intial state and returns the current state value and a functi
 
 The Effect Hook, useEffect, adds the ability to perform side effects from a function component. It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes, but unified into a single API.
 
-By using this Hook, you tell React that your component needs to do something after render. React will remember the function you passed (we’ll refer to it as our “effect”), and call it later after performing the DOM updates.
+useEffect() hook accepts 2 arguments:
 
-A re-render will occur any time the value passed in as the memo to useEffect changes.
+#### `useEffect(callback[, dependencies]);`
+
+- callback is the callback function containing side-effect logic. useEffect() executes the callback function after React has committed the changes to the screen.
+
+- dependencies is an optional array of dependencies. useEffect() executes callback only when the dependencies have changed between renderings.
+
+Dependencies array lets you control when the side-effect runs. When dependencies are:
+
+- Not provided: the side-effect runs after each rendering
+- An empty array []: the side-effect runs once after the initial rendering
+- Has props or state values [prop1, prop2, ..., state1, state2]: the side-effect runs only when any value in the dependencies change.
 
 ### useRef Hook
 
 The useRef hook serves two primary uses : accessing DOM nodes/elements and storing mutable information. It is the equivalent of using document.querySelector in regular javascript.
 
+useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.
+
+#### `const refContainer = useRef(initialValue);`
+
 The ref object is a generic container whose .current property is mutable and can hold any value, similar to an instance property on a class and updating it does not cause a re-render.
+
+#### Sources:
+
+[UseState React Doc](https://reactjs.org/docs/hooks-reference.html#usestate)
+[UseEffect React Doc](https://reactjs.org/docs/hooks-reference.html#useeffect)
+[UseEffect Blog Post (Dmitri Pavlutin)](https://dmitripavlutin.com/react-useeffect-explanation/)
+
+[UseRef React Doc](https://reactjs.org/docs/hooks-reference.html#useref)
+[UseRef React Medium Article](https://medium.com/javascript-in-plain-english/implementing-useref-in-react-732908aa1998)
