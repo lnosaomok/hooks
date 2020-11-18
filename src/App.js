@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./Navbar";
+import UseEffect from "./UseEffect";
+import UseState from "./UseState";
+import UseRef from "./UseRef";
+import "materialize-css/dist/css/materialize.min.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Fragment>
+        <Navbar />
+        <div className='container'>
+          <Switch>
+            <Route exact path='/' component={UseState} />
+
+            <Route exact path='/useState' component={UseState} />
+            <Route exact path='/useRef' component={UseRef} />
+            <Route exact path='/useEffect' component={UseEffect} />
+          </Switch>
+        </div>
+      </Fragment>
+    </Router>
   );
-}
+};
 
 export default App;
